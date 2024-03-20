@@ -1,7 +1,8 @@
 data class Comment(
-    val count: Int = 0,
-    val canPost: Boolean = true,
-    val groupsCanPost : Boolean = true,
-    val canClose: Boolean = true,
-    val canOpen: Boolean = true
+    val fromID: Int,
+    val text: String,
+    val replyToUser: Int = 0,
+    val attachments: Array<Attachment> = emptyArray<Attachment>(),
+    val date: Long = System.currentTimeMillis(),
+    val id: Int = 0
 )
